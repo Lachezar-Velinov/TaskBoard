@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+    --clr-primary: #fff;
+    --clr-accent: #7749f8;
+    --clr-done: #28a745;
+    --clr-outline: #dee2e6;
+
+    --ff-primary: "Inter", sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --inline-padding: 2.5rem;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    margin: 0;
+}
+
+.header {
+    background-color: var(--clr-accent);
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    padding: 0.5rem var(--inline-padding);
+    font-weight: var(--fw-bold);
+}
+
+main {
+    padding-inline: var(--inline-padding);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-block-start: 1rem;
+    max-height: 90%;
+}
+
+main > * {
+    flex-basis: 100%;
+}
+
+form {
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn {
+    background-color: var(--clr-accent);
+    border-radius: 0.25em;
+    padding: 0.25em 1em;
+    max-width: fit-content;
+    border: none;
+}
+
+.card-column {
+    border: 1px solid var(--clr-outline);
+    border-radius: 0.25rem;
+    overflow-y: auto;
+    padding: 0;
+    height: 60vh;
+}
+
+.card-column > :first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+
+.selected {
+    background-color: var(--clr-accent);
+}
+
+.done > * {
+    background-color: var(--clr-done);
+}
+
+.card {
+    border: 1px solid var(--clr-outline);
+}
+
+.card :first-child {
+    font-weight: var(--fw-bold);
+}
+
+.arrow {
+    max-width: fit-content;
+    align-self: center;
+    border: 1px solid black;
+    padding: 0.5rem 0.75rem;
+    background-color: transparent;
+}
+
+.card > * {
+    pointer-events: none;
+}
